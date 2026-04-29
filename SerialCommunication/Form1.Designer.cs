@@ -175,7 +175,7 @@
             this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1045, 513);
+            this.tabControl.Size = new System.Drawing.Size(1045, 514);
             this.tabControl.TabIndex = 9;
             // 
             // tabPageInstellingen
@@ -196,7 +196,7 @@
             this.tabPageInstellingen.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageInstellingen.Name = "tabPageInstellingen";
             this.tabPageInstellingen.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageInstellingen.Size = new System.Drawing.Size(1037, 484);
+            this.tabPageInstellingen.Size = new System.Drawing.Size(1037, 485);
             this.tabPageInstellingen.TabIndex = 2;
             this.tabPageInstellingen.Text = "  ";
             this.tabPageInstellingen.UseVisualStyleBackColor = true;
@@ -852,7 +852,7 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.labelStatus});
-            this.statusStrip.Location = new System.Drawing.Point(0, 587);
+            this.statusStrip.Location = new System.Drawing.Point(0, 588);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip.Size = new System.Drawing.Size(1077, 22);
@@ -879,7 +879,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 609);
+            this.ClientSize = new System.Drawing.Size(1077, 610);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.radioButtonVerbonden);
