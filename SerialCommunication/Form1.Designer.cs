@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.radioButtonVerbonden = new System.Windows.Forms.RadioButton();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.labelPoort = new System.Windows.Forms.Label();
@@ -88,6 +90,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.labelStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.serialPortarduino = new System.IO.Ports.SerialPort(this.components);
+            this.timerOefening5 = new System.Windows.Forms.Timer(this.components);
             this.tabControl.SuspendLayout();
             this.tabPageInstellingen.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -194,7 +198,7 @@
             this.tabPageInstellingen.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageInstellingen.Size = new System.Drawing.Size(1037, 484);
             this.tabPageInstellingen.TabIndex = 2;
-            this.tabPageInstellingen.Text = "Instellingen";
+            this.tabPageInstellingen.Text = "  ";
             this.tabPageInstellingen.UseVisualStyleBackColor = true;
             // 
             // checkBoxDtrEnable
@@ -538,7 +542,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SerialCommunication.Properties.Resources.digital_out;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(227, 21);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -663,7 +667,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::SerialCommunication.Properties.Resources.analog_out;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(36, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
@@ -728,7 +732,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::SerialCommunication.Properties.Resources.digital_in;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(227, 21);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
@@ -763,7 +767,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::SerialCommunication.Properties.Resources.analog_in;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(33, 22);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
@@ -834,7 +838,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::SerialCommunication.Properties.Resources.thermostat;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(32, 22);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
@@ -860,6 +864,17 @@
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(0, 16);
             // 
+            // serialPortarduino
+            // 
+            this.serialPortarduino.BaudRate = 115200;
+            this.serialPortarduino.PortName = "COM3";
+            this.serialPortarduino.ReadTimeout = 1000;
+            this.serialPortarduino.WriteTimeout = 1000;
+            // 
+            // timerOefening5
+            // 
+            this.timerOefening5.Tick += new System.EventHandler(this.timerOefening5_Tick_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -873,7 +888,7 @@
             this.Controls.Add(this.comboBoxPoort);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "BZL seriële communicatie 123";
+            this.Text = "BZL seriële communicatie SDM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPageInstellingen.ResumeLayout(false);
@@ -971,6 +986,8 @@
         internal System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel labelStatus;
+        private System.IO.Ports.SerialPort serialPortarduino;
+        private System.Windows.Forms.Timer timerOefening5;
     }
 }
 
